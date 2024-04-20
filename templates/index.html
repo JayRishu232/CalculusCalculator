@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color: skyblue;
+    }
+
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+    <h1>Calculus Calculator</h1>
+    <br>
+    <img sr="{{url_for("static", filename="img.png")}}">
+    <form method="POST">
+        <label>Enter expression</label>
+        <br>
+        <select class="is-focused is-large", name="operation", aria-label="operationDropdown"><option>Choose operation</option><option value="simplify">Simplify</option><option value="factor">Factor</option></select>
+        <input placeholder="Enter expression", name="text"></input>
+        <input type="submit"></input>
+    </form>
+
+    <p>Result: {{equation}} = {{result}}</p>
+
+</body>
+</html>
