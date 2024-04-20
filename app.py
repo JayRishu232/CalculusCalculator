@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST"])
+@app.route("/")
 def main():
 	return render_template("index.html")
 
@@ -17,4 +17,4 @@ def math_operations():
 	return render_template("index.html", result=answer, equation=equation)
 
 if __name__=="__main__":
-	app.run()
+	@app.run()
